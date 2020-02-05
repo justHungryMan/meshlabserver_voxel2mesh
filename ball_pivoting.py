@@ -27,7 +27,6 @@ def create_tmp_filter_file(clustering, angleThreshold, filename='ball-pivoting.m
     <Param type="RichBool" value="false" name="DeleteFaces"/>
     </filter>
     </FilterScript>
-
     """.format(clustering=clustering, angleThreshold=angleThreshold)
 
 
@@ -37,7 +36,7 @@ def create_tmp_filter_file(clustering, angleThreshold, filename='ball-pivoting.m
 
     with open(cwd + filename, 'w') as f:
         f.write(filter_script_mlx)
-    return cwd + filename
+    return cwd + '/' + filename
 
 
 def ball_pivoting(in_file, out_file, clustering, angleThreshold):
@@ -64,7 +63,8 @@ if __name__ == '__main__':
     if len(sys.argv) < 3:
         print("Usage:")
         print(sys.argv[0] + " /path/to/input_mesh clustering angle_threshold")
-        print(sys.argv[0] + " /home/myuser/mymesh.stl 100 90")
+        print("Example:")
+        print(sys.argv[0] + " /home/myuser/mymesh.xyz 100 90")
         exit(0)
 
     in_mesh = sys.argv[1]
