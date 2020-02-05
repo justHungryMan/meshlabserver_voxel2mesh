@@ -4,15 +4,6 @@ import sys
 import os
 import subprocess
 
-# Script taken from doing the needed operation
-# (Filters > Remeshing, Simplification and Reconstruction >
-# Quadric Edge Collapse Decimation, with parameters:
-# 0.9 percentage reduction (10%), 0.3 Quality threshold (70%)
-# Target number of faces is ignored with those parameters
-# conserving face normals, planar simplification and
-# post-simplimfication cleaning)
-# And going to Filter > Show current filter script
-
 cwd = os.getcwd()
 
 def create_tmp_filter_file(clustering, angleThreshold, filename='ball-pivoting.mlx'):
@@ -72,8 +63,7 @@ if __name__ == '__main__':
     clustering = int(sys.argv[2])
     angle_threshold = int(sys.argv[3])
 
-    folder_name = filename.replace('.', '_')
-    tmp_folder_name = cwd + '/'+ folder_name + '_meshes/'
+    tmp_folder_name = cwd + '/result/' 
 
     print("Input mesh: " + in_mesh + " (filename: " + filename + ")")
     print("Clustering: " + str(clustering))
@@ -85,10 +75,10 @@ if __name__ == '__main__':
     except OSError as e:
         print(sys.stderr, "Exception creating folder for meshes: " + str(e))
 
-    out_mesh = tmp_folder_name + folder_name + ".stl"
+    out_mesh = tmp_folder_name + filename + '_ball_pivoting' + ".stl"
     ball_pivoting(in_mesh, out_mesh, clustering, angle_threshold)
 
     print()
-    print("Done reducing, find the files at: " + tmp_folder_name)
+    print("Done Ball Pivoting, find the files at: " + tmp_folder_name)
 
 
