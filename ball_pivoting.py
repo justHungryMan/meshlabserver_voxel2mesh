@@ -12,10 +12,10 @@ def create_tmp_filter_file(clustering, angleThreshold, filename='ball-pivoting.m
     <!DOCTYPE FilterScript>
     <FilterScript>
     <filter name="Surface Reconstruction: Ball Pivoting">
-    <Param type="RichAbsPerc" value="0" min="0" name="BallRadius" max="2928.8"/>
-    <Param type="RichFloat" value="{clustering}" name="Clustering"/>
-    <Param type="RichFloat" value="{angleThreshold}" name="CreaseThr"/>
-    <Param type="RichBool" value="false" name="DeleteFaces"/>
+        <Param type="RichAbsPerc" value="0" min="0" name="BallRadius" max="2928.8"/>
+        <Param type="RichFloat" value="{clustering}" name="Clustering"/>
+        <Param type="RichFloat" value="{angleThreshold}" name="CreaseThr"/>
+        <Param type="RichBool" value="false" name="DeleteFaces"/>
     </filter>
     </FilterScript>
     """.format(clustering=clustering, angleThreshold=angleThreshold)

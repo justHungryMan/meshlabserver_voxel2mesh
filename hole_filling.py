@@ -14,10 +14,10 @@ def create_tmp_filter_file(max_size, filename='hole-filling.mlx'):
     <Param name="Threshold" description="Merging distance" value="0" min="0" max="1" type="RichAbsPerc" tooltip="All the vertices that closer than this threshold are merged together. Use very small values, default values is 1/10000 of bounding box diagonal."/>
     </filter>
     <filter name="Close Holes">
-    <Param type="RichInt" value="{max_size}" name="MaxHoleSize"/>
-    <Param type="RichBool" value="false" name="Selected"/>
-    <Param type="RichBool" value="true" name="NewFaceSelected"/>
-    <Param type="RichBool" value="true" name="SelfIntersection"/>
+        <Param type="RichInt" value="{max_size}" name="MaxHoleSize"/>
+        <Param type="RichBool" value="false" name="Selected"/>
+        <Param type="RichBool" value="true" name="NewFaceSelected"/>
+        <Param type="RichBool" value="true" name="SelfIntersection"/>
     </filter>
     </FilterScript>
     """.format(max_size=max_size)

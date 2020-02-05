@@ -14,10 +14,10 @@ def create_tmp_filter_file(iterate, filename='laplacian-smoothing.mlx'):
     <Param name="Threshold" description="Merging distance" value="0" min="0" max="1" type="RichAbsPerc" tooltip="All the vertices that closer than this threshold are merged together. Use very small values, default values is 1/10000 of bounding box diagonal."/>
     </filter>
     <filter name="Laplacian Smooth">
-    <Param type="RichInt" value="{iterate}" name="stepSmoothNum"/>
-    <Param type="RichBool" value="true" name="Boundary"/>
-    <Param type="RichBool" value="true" name="cotangentWeight"/>
-    <Param type="RichBool" value="false" name="Selected"/>
+        <Param type="RichInt" value="{iterate}" name="stepSmoothNum"/>
+        <Param type="RichBool" value="true" name="Boundary"/>
+        <Param type="RichBool" value="true" name="cotangentWeight"/>
+        <Param type="RichBool" value="false" name="Selected"/>
     </filter>
     </FilterScript>
     """.format(iterate=iterate)
