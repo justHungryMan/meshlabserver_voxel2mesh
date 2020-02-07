@@ -65,7 +65,7 @@ if __name__ == '__main__':
     filename = in_mesh.split('/')[-1].split('.')[0]
     max_size = int(sys.argv[2])
 
-    tmp_folder_name = cwd + '/result/'ㄴ
+    tmp_folder_name = cwd + '/result/'
 
     print("Input mesh: " + in_mesh + " (filename: " + filename + ")")
     print("Max hole size: " + str(max_size))
