@@ -25,7 +25,7 @@ def create_tmp_filter_file(clustering, angleThreshold, filename='ball-pivoting.m
     print(filter_script_mlx)
     print("***********************************")
 
-    with open(cwd + filename, 'w') as f:
+    with open(cwd + '/' + filename, 'w') as f:
         f.write(filter_script_mlx)
     return cwd + '/' + filename
 
